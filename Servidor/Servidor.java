@@ -1,71 +1,22 @@
 package Servidor;
 
-import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.net.MalformedURLException;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 
 public class Servidor {
 
-	public static void main(String args[]) {
-		try {
-			//1
-			ServerSocket srvSocket = new ServerSocket(5566);
-			System.out.println("Aguardando envio de arquivo ...");
-			Socket socket = srvSocket.accept();
+	public static void main(String[] args) throws RuntimeException, MalformedURLException {
+	}static{
 
-			//2
-			byte[] objectAsByte = new byte[socket.getReceiveBufferSize()];
-			BufferedInputStream bf = new BufferedInputStream(
-					socket.getInputStream());
-			bf.read(objectAsByte);
+		try{    
+			Registry reg = LocateRegistry.createRegistry(1060);
+			reg.rebind("SERVIDOR RMI", new RMIServerImplementation());
+			System.out.println("Servidor Iniciando...");
+		}catch(Exception e){
 
-			//3
-			Arquivo arquivo = (Arquivo) getObjectFromByte(objectAsByte);
+			System.out.println("Erro! Não foi possível conectar" +e);
 
-			//4
-			String dir = arquivo.getDiretorioDestino().endsWith("/") ? arquivo
-					.getDiretorioDestino() + arquivo.getNome() : arquivo
-					.getDiretorioDestino() + "/" + arquivo.getNome();
-					System.out.println("Escrevendo arquivo " + dir);
-
-					//5
-					FileOutputStream fos = new FileOutputStream(dir);
-					fos.write(arquivo.getConteudo());
-					fos.close();
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		}   
 	}
-
-	private static Object getObjectFromByte(byte[] objectAsByte) {
-		Object obj = null;
-		ByteArrayInputStream bis = null;
-		ObjectInputStream ois = null;
-		try {
-			bis = new ByteArrayInputStream(objectAsByte);
-			ois = new ObjectInputStream(bis);
-			obj = ois.readObject();
-
-			bis.close();
-			ois.close();
-
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();           
-		}                 
-
-		return obj;
-
-	}
-
 }

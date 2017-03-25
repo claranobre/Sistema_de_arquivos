@@ -14,14 +14,14 @@ public class Arquivo implements Serializable {
 	private String nome;
 	private byte[] conteudo;
 	private String diretorioDestino;
-	private Date dataHoraUpload;        
+	//private Date dataHoraUpload;        
 
-	public Date getDataHoraUpload() {
+	/*public Date getDataHoraUpload() {
 		return dataHoraUpload;
 	}
 	public void setDataHoraUpload(Date dataHoraUpload) {
 		this.dataHoraUpload = dataHoraUpload;
-	}
+	}*/
 	public String getNome() {
 		return nome;
 	}

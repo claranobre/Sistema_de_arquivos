@@ -10,7 +10,7 @@ public class Arquivo implements Serializable {
 	private String nome;
 	private byte[] conteudo;
 	private transient long tamanhoKB;
-	private transient Date dataHoraUpload;
+	//private transient Date dataHoraUpload;
 	private transient String ipDestino;
 	private transient String portaDestino;
 	private String diretorioDestino;
@@ -39,12 +39,13 @@ public class Arquivo implements Serializable {
 	public void setTamanhoKB(long tamanhoKB) {
 		this.tamanhoKB = tamanhoKB;
 	}
+	/*
 	public Date getDataHoraUpload() {
 		return dataHoraUpload;
-	}
-	public void setDataHoraUpload(Date dataHoraUpload) {
+	}*/
+	/*public void setDataHoraUpload(Date dataHoraUpload) {
 		this.dataHoraUpload = dataHoraUpload;
-	}
+	}*/
 	public String getIpDestino() {
 		return ipDestino;
 	}
