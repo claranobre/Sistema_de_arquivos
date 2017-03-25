@@ -78,7 +78,7 @@ public class RMIServidorImplementacao {
 			}
 			
 			else if(comando == rm){
-				System.out.println(lerArq.getName.delete());
+				
 			}
 		}
 	} 

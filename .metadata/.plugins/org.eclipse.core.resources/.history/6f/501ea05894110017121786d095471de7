@@ -12,7 +12,7 @@ public class Cliente {
 			RMIInterfaces rmirequest = (RMIInterfaces) regcli.lookup("RMI SERVER");
 			for(int i=0; i<=10; i++){
 				sleep(500);
-				//Saída do servidor//
+				System.out.println("Fatorial de: "+i+" é "+rmirequest.fatorial(i));
 			}
 		}catch(Exception e){
 			System.out.println(e);

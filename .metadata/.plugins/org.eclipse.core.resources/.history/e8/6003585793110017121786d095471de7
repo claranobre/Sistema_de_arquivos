@@ -76,10 +76,6 @@ public class RMIServidorImplementacao {
 			else if(comando == ls){
 				getArquivosDaPasta();
 			}
-			
-			else if(comando == rm){
-				System.out.println(lerArq.getName.delete());
-			}
 		}
 	} 
 }
