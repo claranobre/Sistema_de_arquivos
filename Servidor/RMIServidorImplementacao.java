@@ -12,7 +12,7 @@ public class RMIServidorImplementacao {
 
 		private String caminho = "/home/clara/Documents";
 
-		public RMIServerImplementation() throws RemoteException{
+		public RMIServerImplementacao() throws RemoteException{
 			super();     
 		}
 
@@ -38,7 +38,7 @@ public class RMIServidorImplementacao {
 			return arquivos;
 		}
 
-		public void receberComando(List<String> comando) throws RemoteException{
+		public void receberComandos(List<String> comando) throws RemoteException{
 
 			ArrayList<String> arquivos = new ArrayList<String>();
 
