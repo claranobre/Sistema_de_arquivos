@@ -1,0 +1,246 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sistema-de-arquivos-distribu&#xED;dos">Sistema de Arquivos Distribu&#xED;dos</h1>
+<p>Projeto de implementa&#xE7;&#xE3;o RMI da disciplina de Programa&#xE7;&#xE3;o Distribu&#xED;da 2017.1</p>
+<h1 id="rmi">RMI</h1>
+<p>O RMI (Remote Method Invocation) &#xE9; uma interface de programa&#xE7;&#xE3;o que permite a execu&#xE7;&#xE3;o de chamadas remotas no estilo RPC em aplica&#xE7;&#xF5;es desenvolvidas em Java. &#xC9; uma das abordagens da plataforma Java para prover as funcionalidades de uma plataforma de objetos distribu&#xED;dos. Esse sistema de objetos distribu&#xED;dos faz parte do n&#xFA;cleo b&#xE1;sico de Java desde a vers&#xE3;o <code>JDK 1.1</code>, com sua API sendo especificada atrav&#xE9;s do pacote <code>java.rmi</code> e seus subpacotes.</p>
+<p>Atrav&#xE9;s da utiliza&#xE7;&#xE3;o da arquitetura RMI, &#xE9; poss&#xED;vel que um objeto ativo em uma m&#xE1;quina virtual Java possa interagir com objetos de outras m&#xE1;quinas virtuais Java, independentemente da localiza&#xE7;&#xE3;o dessas m&#xE1;quinas virtuais.</p>
+<p>A API RMI fornece ferramentas para que seja poss&#xED;vel ao programador desenvolver uma aplica&#xE7;&#xE3;o sem se preocupar com detalhes de comunica&#xE7;&#xE3;o entre os diversos poss&#xED;veis elementos (<code>hosts</code>) de um sistema.</p>
+<p>Fonte:<a href="https://pt.wikipedia.org/wiki/RMI" target="_blank">Wikipedia</a></p>
+<h1 id="descri&#xE7;&#xE3;o-do-que-foi-solicitado">Descri&#xE7;&#xE3;o do que foi solicitado</h1>
+<ul>
+<li>Implemente um servidor de arquivos distribu&#xED;dos que permita aos clientes:</li>
+<li><strong> a. Criar um diret&#xF3;rio ou um arquivo </strong></li>
+<li><strong> b. Navegar no sistema de arquivos, podendo visualizar arquivos internos, abrir arquivos, remover arquivos. </strong></li>
+<li><strong> c. Do lado do cliente deve existir shell de comandos que permite ao usu&#xE1;rio navegar pelo sistema de arquivos, listar o conteudo do diret&#xF3;rio, mudar de diret&#xF3;rios, copiar um arquivo de um diret&#xF3;rio para outro, mostrar o conte&#xFA;do de um arquivo.</strong></li>
+</ul>
+<h1 id="o-projeto">O Projeto</h1>
+<ul>
+<li><p>Cliente
+A interface do cliente possui a tentativa de conex&#xE3;o ao servidor e os comandos dados pelo usu&#xE1;rio. Permitindo qu&#xEA; este em sua conex&#xE3;o estabelecida possa navegar no sistema de arquivos, podendo visualiz&#xE1;-los dentro do diret&#xF3;rio, abrir um determinado arquivo (independente de sua extens&#xE3;o) e remover arquivos.</p>
+</li>
+<li><p><strong> O que n&#xE3;o foi desenvolvido: </strong>
+N&#xE3;o foi implementado a navega&#xE7;&#xE3;o entre diret&#xF3;rios nem a c&#xF3;pia de um arquivo para outro diret&#xF3;rio justamente pela &#xE1;rvore de diret&#xF3;rios n&#xE3;o ter sido implementada, como solicitado.</p>
+</li>
+<li><p>Servidor
+A interface do servidor possui as configura&#xE7;&#xF5;es de conex&#xE3;o para permitir o acesso do cliente, o controle de acesso, assim como a cadeia de comandos que pode ser recebida pelo cliente, permitindo ent&#xE3;o ele executar as a&#xE7;&#xF5;es desejadas.
+Como n&#xE3;o foi implementado a &#xE1;rvore de diret&#xF3;rios para navega&#xE7;&#xE3;o, tamb&#xE9;m n&#xE3;o existe essa possibilidade de acesso e manipula&#xE7;&#xE3;o dentro do servidor.</p>
+</li>
+</ul>
+<h1 id="objetivo">Objetivo</h1>
+<p>Implementar a interface RMI(Remote Method Invocation) mostrada em sala de aula para clarificar como &#xE9; uma comunica&#xE7;&#xE3;o distribu&#xED;da.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2017-03-28T11:01:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-28T11:11:29.936Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
