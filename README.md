@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sistema de Arquivos Distribuídos
 Projeto de implementação RMI da disciplina de Programação Distribuída 2017.1
 
@@ -39,14 +38,25 @@ Permitindo quê este em sua conexão estabelecida possa navegar no sistema de ar
 Não foi implementado a navegação entre diretórios nem a cópia de um arquivo para outro diretório justamente pela árvore de diretórios não ter sido implementada, como solicitado.
 
 * Servidor
-A interface do servidor possui as configurações de conexão para permitir o acesso do cliente, o controle de acesso, assim como a cadeia de comandos que pode ser recebida pelo cliente, permitindo então ele executar as ações desejadas.
+A interface do servidor possui as configurações de conexão para permitir o acesso do cliente:
+```
+		try{    
+			Registry reg = LocateRegistry.createRegistry(1060); //RMI Registry: serviço de nomes (localização do objeto remoto)
+			reg.rebind("SERVIDOR RMI", new RMIServerImplementation());
+			System.out.println("Servidor Iniciando...");
+		}catch(Exception e){
+```		
+
+O controle de acesso, assim como a cadeia de comandos que pode ser recebida pelo cliente, permitindo então ele executar as ações desejadas foram implementadas em uma interface que irá gerenciar todas as execuções possíveis.
+Abaixo estão os métodos utilizados:
+```
+public List<String> getArquivosDaPasta() throws RemoteException{
+
+public void receberComandos(List<String> comando) throws RemoteException{
+
+```
 Como não foi implementado a árvore de diretórios para navegação, também não existe essa possibilidade de acesso e manipulação dentro do servidor.
 
 # Objetivo
 
-Implementar a interface RMI(Remote Method Invocation) mostrada em sala de aula para clarificar como é uma comunicação distribuída.
-=======
-# My Awesome Book
-
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
->>>>>>> 2c2a803dadf2cbfed6b3c2b8b34971b54a42e76c
+Implementar a arquitetura RMI(Remote Method Invocation) mostrada em sala de aula para clarificar como é uma comunicação distribuída.
