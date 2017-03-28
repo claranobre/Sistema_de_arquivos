@@ -19,7 +19,7 @@ Implemente um servidor de arquivos distribuídos que permita aos clientes:
 
 # O Projeto
 
-* Cliente: *
+* Cliente: 
 A classe Cliente possui a tentativa de conexão ao servidor 
 
 ```Registry regcli = LocateRegistry.getRegistry("localhost", 1060);```
@@ -37,7 +37,7 @@ Permitindo quê este em sua conexão estabelecida possa navegar no sistema de ar
 - ** O que não foi desenvolvido: **
 Não foi implementado a navegação entre diretórios nem a cópia de um arquivo para outro diretório justamente pela árvore de diretórios não ter sido implementada, como solicitado.
 
-* Servidor: *
+* Servidor: 
 A interface do servidor possui as configurações de conexão para permitir o acesso do cliente:
 ```
 		try{    
