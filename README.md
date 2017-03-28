@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sistema de Arquivos Distribuídos
 Projeto de implementação RMI da disciplina de Programação Distribuída 2017.1
 
@@ -44,3 +45,8 @@ Como não foi implementado a árvore de diretórios para navegação, também n�
 # Objetivo
 
 Implementar a interface RMI(Remote Method Invocation) mostrada em sala de aula para clarificar como é uma comunicação distribuída.
+=======
+# My Awesome Book
+
+This file file serves as your book's preface, a great place to describe your book's content and ideas.
+>>>>>>> 2c2a803dadf2cbfed6b3c2b8b34971b54a42e76c
