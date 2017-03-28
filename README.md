@@ -60,3 +60,28 @@ Como não foi implementado a árvore de diretórios para navegação, também n�
 # Objetivo
 
 Implementar a arquitetura RMI(Remote Method Invocation) mostrada em sala de aula para clarificar como é uma comunicação distribuída.
+
+# Como executar
+
+Inicialmente deve-se executar o servidor de Nomes usando o comando:
+```
+start rmiregistry
+```
+Então devemos compilar o servidor para produzirmos o arquivo ```.class```
+``` 
+javac Servidor.java 
+```
+Depois precisamos executar o compilador ```rmic``` para obter o ```stub``` e ```skeleton```
+
+Execute o programa Sevidor:
+```
+java Servidor
+```
+
+Em seguida, execute o Cliente(compile-o antes ```javac Cliente.java```):
+```
+java Cliente
+```
+
+
+
